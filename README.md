@@ -18,3 +18,10 @@ curl http://127.0.0.1:5000/max-min-average-value/gbp/20
 ```
 curl http://127.0.0.1:5000/major-difference-between-buy-ask/gbp/20
 ```
+
+## Unit Tests
+
+- To run unit tests:
+```
+pytest tests
+```
