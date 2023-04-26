@@ -1,13 +1,15 @@
 FROM python:3.9-slim-buster
 
-EXPOSE 5000
+EXPOSE 5000/tcp
 
-WORKDIR /
+COPY ./requirements.txt /app/requirements.txt
 
-COPY requirements.txt .
+WORKDIR /app
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-COPY . .
+COPY . /app
 
-CMD ["python", "src/app.py"]
+ENTRYPOINT [ "python" ]
+
+CMD ["src/app.py"]
