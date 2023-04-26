@@ -25,3 +25,20 @@ curl http://127.0.0.1:5000/major-difference-between-buy-ask/gbp/20
 ```
 pytest tests
 ```
+
+
+## Run Dockerfile
+
+- Firstly create the image on the same folder with Dockerfile:
+```
+docker image build -t api_server
+```
+
+- Secondly you can run the container for the image e created above. 
+```
+docker run -p 5000:5000 -d api_server
+```
+### Now, api_server  web api is ready on the localhost:5000
+
+
+
